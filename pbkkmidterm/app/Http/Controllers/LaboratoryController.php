@@ -33,6 +33,9 @@ class LaboratoryController extends Controller
     public function create()
     {
         //
+        // $itemtypes = Itemtype::all();
+        // $itemconds = Itemcond::all();
+        // return view('form', compact('itemtypes', 'itemconds'));
         return view('form');
     }
 

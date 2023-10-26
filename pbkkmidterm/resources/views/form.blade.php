@@ -13,18 +13,18 @@
     <form action="{{ route('form.update', ['form' => $laboratory->id]) }}"  enctype="multipart/form-data" method="POST" class="d-flex flex-column gap-3">
         @method('PUT')
         @csrf
-        <select name="item_type" required id="item_type">
+        {{-- <select name="item_type" required id="item_type">
             <option value="" disabled>Select Item Type</option>
             @foreach($itemtype as $item)
                 <option value="{{ $item->id }}" {{ $laboratory->item_type == $item->id ? 'selected' : '' }}>{{ $item->item_type }}</option>
             @endforeach
-        </select>
-        <select name="item_cond" required id="item_cond">
+        </select> --}}
+        {{-- <select name="item_cond" required id="item_cond">
             <option value="" disabled>Select Item Condition</option>
             @foreach($itemcond as $cond)
                 <option value="{{ $cond->id }}" {{ $laboratory->item_cond == $cond->id ? 'selected' : '' }}>{{ $cond->condition_name }}</option>
             @endforeach
-        </select>
+        </select> --}}
         <input type="text" name="item_type" placeholder="Item Type" value="{{$laboratory->item_type}}" required/>
         <input type="text" name="item_cond" placeholder="Item Condition" value="{{$laboratory->item_cond}}"required/>
         <input type="text" name="description" placeholder="Description" value="{{$laboratory->description}}" required/>
